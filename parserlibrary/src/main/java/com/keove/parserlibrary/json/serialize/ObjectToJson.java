@@ -1,7 +1,7 @@
 package com.keove.parserlibrary.json.serialize;
 
-import com.keove.parserlibrary.JPM.JPM;
-import com.keove.parserlibrary.ParseUtils;
+import com.keove.videoapp.annotations.JPM;
+import com.keove.videoapp.data.parsers.ParseUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,11 +19,6 @@ import java.util.List;
 
 
 public class ObjectToJson {
-
-
-
-
-
 
     public JSONObject toJsonObject(Object object) {
         try {
@@ -118,10 +113,8 @@ public class ObjectToJson {
         }
     }
 
-
     private void handleFieldReflected(JSONObject j, Field f, Object object) {
 
     }
-
 
 }

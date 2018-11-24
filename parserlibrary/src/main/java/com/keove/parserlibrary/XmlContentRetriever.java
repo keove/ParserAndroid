@@ -1,6 +1,5 @@
 package com.keove.parserlibrary;
 
-import android.annotation.SuppressLint;
 import android.util.Log;
 
 import org.w3c.dom.Document;
@@ -22,7 +21,6 @@ import javax.xml.transform.stream.StreamResult;
 public class XmlContentRetriever
 {
 
-    @SuppressLint("LongLogTag")
     public static String GetStringByTag(String tag, String source)
     {
         try

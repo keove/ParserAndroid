@@ -3,7 +3,8 @@ package com.keove.parserlibrary.xml;
 
 import android.app.Activity;
 import android.util.Log;
-import com.keove.parserlibrary.NodeListToArrayList;
+
+import com.keove.videoapp.data.parsers.NodeListToArrayList;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

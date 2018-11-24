@@ -1,7 +1,8 @@
 package com.keove.parserlibrary.xml;
 
-import com.keove.parserlibrary.NameValue;
-import com.keove.parserlibrary.NodeListToNameValueMatrix;
+
+import com.keove.videoapp.data.parsers.NameValue;
+import com.keove.videoapp.data.parsers.NodeListToNameValueMatrix;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+
 
 public class XmlToNameValueMatrix
 {

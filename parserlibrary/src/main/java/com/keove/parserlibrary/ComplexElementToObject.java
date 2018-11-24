@@ -1,6 +1,5 @@
 package com.keove.parserlibrary;
 
-import android.annotation.SuppressLint;
 import android.util.Log;
 
 import org.w3c.dom.Attr;
@@ -57,7 +56,6 @@ public class ComplexElementToObject
 	
 
 	
-	@SuppressLint("LongLogTag")
 	public Object Parse(String source)
 	{
 		try 
