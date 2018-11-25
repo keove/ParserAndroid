@@ -1,7 +1,7 @@
 package com.keove.parserlibrary.json.serialize;
 
-import com.keove.videoapp.annotations.JPM;
-import com.keove.videoapp.data.parsers.ParseUtils;
+import com.keove.parserlibrary.JPM.JPM;
+import com.keove.parserlibrary.ParseUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;

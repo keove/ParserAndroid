@@ -3,7 +3,7 @@ package com.keove.parserlibrary.json;
 import android.graphics.Typeface;
 import android.util.Log;
 
-import com.keove.videoapp.annotations.JPM;
+import com.keove.parserlibrary.JPM.JPM;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,56 +27,24 @@ public class JsonToObject {
             Iterator<String> iter = jobject.keys();
             while (iter.hasNext()) {
                 String key = iter.next();
-
-                Field field = fieldByJPMKeyAnnotation(o, key);
-
-                if (field != null) {
-                    handleFieldAnnotated(o, field, key, jobject);
-                }
-                else {
-                    try {
-                        field = o.getClass().getField(key);
-                        if (field.isAnnotationPresent(JPM.class)) {
-                            handleFieldAnnotated(o, field, key, jobject);
-                        }
-                        else {
-                            handleField(o, key, jobject);
-                        }
+                try {
+                    Field field = o.getClass().getField(key);
+                    if (field.isAnnotationPresent(JPM.class)) {
+                        handleFieldAnnotated(o, field, key, jobject);
                     }
-                    catch (Exception ex) {
-                        ex.printStackTrace();
+                    else {
+                        handleField(o, key, jobject);
                     }
+                } catch (Exception ex) {
+
                 }
 
 
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             Log.i("JsonToObject", "line 33 e:" + e.toString());
         }
         return o;
-    }
-
-
-    private Field fieldByJPMKeyAnnotation(Object object, String key) {
-
-        try {
-            Field[] fields = object.getClass().getFields();
-            for (Field field : fields) {
-                if (field.isAnnotationPresent(JPM.class)) {
-                    JPM jpm = field.getAnnotation(JPM.class);
-                    if (jpm.Key().contentEquals(key)) {
-                        return field;
-                    }
-                }
-            }
-        }
-        catch (Exception ex) {
-            ex.printStackTrace();
-
-        }
-
-        return null;
     }
 
 

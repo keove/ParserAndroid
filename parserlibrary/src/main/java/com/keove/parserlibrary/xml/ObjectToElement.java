@@ -1,8 +1,8 @@
 package com.keove.parserlibrary.xml;
 
 
-import com.keove.videoapp.annotations.JPM;
-import com.keove.videoapp.data.parsers.ParseUtils;
+import com.keove.parserlibrary.JPM.JPM;
+import com.keove.parserlibrary.ParseUtils;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

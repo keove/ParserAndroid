@@ -2,7 +2,7 @@ package com.keove.parserlibrary;
 
 import android.util.Log;
 
-import com.keove.videoapp.data.parsers.xml.ElementToObject;
+import com.keove.parserlibrary.xml.ElementToObject;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;

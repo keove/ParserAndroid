@@ -1,8 +1,7 @@
 package com.keove.parserlibrary.xml;
 
-
-import com.keove.videoapp.data.parsers.NameValue;
-import com.keove.videoapp.data.parsers.NodeListToNameValueMatrix;
+import com.keove.parserlibrary.NameValue;
+import com.keove.parserlibrary.NodeListToNameValueMatrix;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
